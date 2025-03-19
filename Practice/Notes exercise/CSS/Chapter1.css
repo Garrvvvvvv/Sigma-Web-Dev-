@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+div.red{
+    color: white;
+    background-color: red;
+}
+
+#head{
+    background-color: aqua;
+    color: red;
+}
+
+.home{
+    background-color: green;
+}
+.room{
+    color:black;
+} 

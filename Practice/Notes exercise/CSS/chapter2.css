@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    background-color: darkblue;
+    color: rgb(102, 255, 0);
+}
+main{
+    color: darkred;
+}
+
+
+.Background{
+    height: 500px;
+    width: 2000px;
+    background-size: fill;
+    background-image: url(Background.webp);
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+.part4{
+    height: 200px;
+border: 2px solid black;
+background-image: url(Background.webp);
+background-attachment: fixed;
+
+}
+.part5{
+    background: red url(Background.webp ) repeat-x ;
+}
