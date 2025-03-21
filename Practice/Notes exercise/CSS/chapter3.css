@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bytesized&family=Tektur:wght@400..900&display=swap');
+
+header,main,footer{
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
+    ;
+}
+main{
+    font-family: "Tektur", sans-serif;
+    color: blue;
+    font-weight: 600;
+    font-style: oblique;
+    line-height: 25px;
+    text-decoration: underline;
+    text-decoration-style: dashed ;
+    text-decoration-color: rgb(0, 255, 76) ;
+    text-decoration-thickness: 3px;
+ 
+
+}

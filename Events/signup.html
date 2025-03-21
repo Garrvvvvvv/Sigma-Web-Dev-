@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="CSS/register.css">
+    <script defer>
+        function toggleDropdown() {
+            document.getElementById("dropdown-menu").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.profile-btn')) {
+                let dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="CSS/Images/finalbassment.png" alt="Logo">
+            <span>Bassment</span>
+        </div>
+        <!-- <a href="about.html">About Us</a> -->
+        <div class="profile">
+            <button class="profile-btn" onclick="toggleDropdown()">Our Socials ▼</button>
+            <div class="dropdown-menu" id="dropdown-menu">
+                <a target="_blank" href="https://www.instagram.com/bassment_eventss/">Instagram</a>
+                <a href="#">X</a>
+                <a href="#">Facebook</a>
+
+            </div>
+
+    </nav>
+    <div class="signup-container">
+        <form action="config.php" method="POST">
+            <h2>Sign Up</h2>
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="mobile" placeholder="Mobile Number" required>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm-password" placeholder="Confirm Password" required>
+            
+            <div class="terms" style="display: inline;">
+                <input class="terms checkbox" type="checkbox" name="terms" required>
+                I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a>
+            </div>
+            
+            <button type="submit">Sign Up</button>
+            <div class="terms">
+                
+                Already have a account!<a href="login.html" target="_blank">Login</a>
+            </div>
+        </form>
+
+        
+
+    </div>
+    <script>
+        function signup() {
+            let fullname = document.getElementById("fullname").value;
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let gender = document.getElementById("gender").value;
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm-password").value;
+            let termsChecked = document.getElementById("terms").checked;
+
+            if (fullname === "" || email === "" || mobile === "" || gender === "" || password === "" || confirmPassword === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            if (!termsChecked) {
+                alert("You must agree to the Terms and Conditions.");
+                return;
+            }
+
+            alert("Sign Up Successful!");
+        }
+    </script>
+</body>
+
+</html>

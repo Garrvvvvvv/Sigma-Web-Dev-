@@ -1,0 +1,79 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(to bottom , rgb(160, 18, 18), rgb(0, 0, 0));
+    /* background-image: linear-gradient(red, black ); */
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    height: 420px;
+    width: 300px;
+    margin: 5px;
+    border-radius: 9px;
+
+}
+
+.pic {
+    padding: 5px;
+    border-radius: 9px;
+}
+
+.capsule {
+    margin-left: 10px;
+}
+
+div span {
+    border: 1.5px solid rgb(210, 204, 204);
+    border-radius: 9px;
+    padding: 2px 12px;
+    color: rgb(129, 125, 125);
+    font-size: 13px;
+}
+
+.heading {
+    margin-left: 6px;
+    margin-top: 8px;
+}
+
+.content {
+    margin-left: 6px;
+    margin-top: 8px;
+    color: rgb(105, 104, 104);
+
+
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    border-radius: 15px;
+    padding: 6px 10px;
+    background-color: rgb(175, 218, 248);
+    border: none;
+    margin-top: 15px;
+    color: rgb(60, 60, 186);
+    font-weight: 550;
+
+
+}
+
+button:hover {
+    background-color: rgb(149, 209, 252);
+    color: rgb(3, 0, 62);
+
+}
+
+::selection{
+    background-color: black;
+    color: aquamarine;
+}
