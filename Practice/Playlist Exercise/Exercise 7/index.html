@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Edit text Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-around;
+            font-family: 'Segoe UI';
+            font-weight: 400;
+
+        }
+
+
+        ul {
+            display: flex;
+            gap: 20px
+        }
+
+
+        ul li {
+            list-style: none;
+
+
+        }
+
+        ul li a {
+            display: flex;
+            color: rgb(48, 48, 48);
+            padding-right: 10px;
+
+            text-decoration: none;
+
+        }
+
+        ul li a svg {
+            padding-top: 3px;
+            margin-left: 2px;
+        }
+
+
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 30px;
+            height: 5px;
+            background-color: rgb(16, 9, 9);
+            margin: 5px;
+        }
+
+        @media screen and (max-width: 990px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #ffffff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                text-align: center;
+
+
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .noneindrop {
+                display: none;
+            }
+        }
+
+        .conatiner {
+            display: flex;
+            /* grid-template-columns: repeat(3, 302px);
+            grid-template-rows: repeat(4, 202px);
+            row-gap: 15px;
+            column-gap: 15px;
+            grid-template-areas: "English Deutsh Italino", "Espanol francis portugues bransileiro", "japanese korean chinese"
+                "traditional chinese" */
+        }
+
+        /* .card1 {
+            grid-area: "English";
+            background-color: rgb(237, 234, 234);
+        } */
+
+        .card button {
+            margin-left: 100px;
+            background-color: #5cb85c;
+            color: #fff;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            /* border-color: rgb(237, 234, 234); */
+        
+            border-radius: 6px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Logo.jpg" alt="logo" height="65px">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="right">
+
+                <ul class="nav-links">
+                    <li><a href="/blank">Product <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                                height="20" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a></li>
+
+                    <li><a href="/blank">For business <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                width="20" height="20" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg> </a></li>
+                    <li><a href="/blank">Resorces <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
+                                height="20" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a></li>
+                    <li><a href="/blank">Acdemic Licensing </a></li>
+                    <li><a href="/blank">Our Company <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                width="20" height="20" color="#000000" fill="none">
+                                <path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></a></li>
+                    <li class="noneindrop"><a href="/blank">&#xe8e2; </li></a></li>
+                    <li class="noneindrop"><a href="/blank"></a><i class="fa fa-search"></i></li>
+            </div>
+            </ul>
+
+        </nav>
+
+    </header>
+    <main>
+        <div class="conatiner">
+            <div class="card card1">
+                <h3>
+                    English
+                </h3>
+                <button style="display: block;">
+                    Download 64-bit
+                </button>
+                <i>SHA256</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, similique.</p>
+            </div>
+            <div class=" card card1">
+                <h3>
+                    English
+                </h3>
+                <button style="display: block;">
+                    Download 64-bit
+                </button>
+                <i>SHA256</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, similique.</p>
+            </div>
+            <div class="card card1">
+                <h3>
+                    English
+                </h3>
+                <button style="display: block;">
+                    Download 64-bit
+                </button>
+                <i>SHA256</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, similique.</p>
+            </div>
+            <div class="card card1">
+                <h3>
+                    English
+                </h3>
+                <button style="display: block;">
+                    Download 64-bit
+                </button>
+                <i>SHA256</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, similique.</p>
+            </div>
+            <div class="card card1">
+                <h3>
+                    English
+                </h3>
+                <button style="display: block;">
+                    Download 64-bit
+                </button>
+                <i>SHA256</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, similique.</p>
+            </div>
+            <div class="card card1">
+                <h3>
+                    Engl ish
+                </h3>
+                <button>
+                    Download 64-bit
+                </button>
+                <i>SHA256</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, similique.</p>
+            </div>
+            <div class="card card1">
+                <h3>
+                    English
+                </h3>
+                <button style="display: block;">
+                    Download 64-bit
+                </button>
+                <i>SHA256</i>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, similique.</p>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+
+</html>

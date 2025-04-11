@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.User-conatiner{
+    background-color: rgb(68, 68, 64);
+    height: 300px;
+    width: 200px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(185, 30, 22);
+    font-size: 20px;
+    font-weight: bold;
+}
+.User-image{
+
+    height: 50%;
+    border-radius: 50%;
+
+}
