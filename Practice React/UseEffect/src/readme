@@ -1,0 +1,15 @@
+      // first-->side effect function
+      // second--> clean-up function
+      // third--> comma seperated dep list 
+
+
+// basic syntax of useEffect :
+
+         useEffect(() => {
+            first
+
+            return()=>{
+              second
+            }
+            
+          }, [count])

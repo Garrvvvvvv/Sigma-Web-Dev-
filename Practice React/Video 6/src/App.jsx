@@ -5,13 +5,13 @@ import ColourswitchBtn from './colourswitchBtn.jsx'
 function App() {
   function getrandomcolour(){
     
-    let r= 150+Math.round(100*Math.random())
-    let g= 150+Math.round(100*Math.random())
-    let b= 150+Math.round(100*Math.random())
+    let r= 0+Math.round(255*Math.random())
+    let g= 0+Math.round(255*Math.random())
+    let b= 0+Math.round(255*Math.random())
     return `rgb(${r},${g},${b})`
     
   }
-  const[colourcode,setcolourcode]=useState("rgb(0,0,0)")
+  const[colourcode,setcolourcode]=useState("rgb(255, 255, 255)")
   const[count , setcount]=useState(0);
   function inccount(){
     setcount(count+1)
@@ -19,22 +19,24 @@ function App() {
   // function alertfunction(){
   //   alert("I am clicked")
   // }
+  var colorr=getrandomcolour();
   function handlechangecolour(){
     
-    console.log(getrandomcolour())
     let bodystyle =document.getElementsByClassName("container")[0];
-    bodystyle.style.backgroundColor=getrandomcolour();
+    // let btnbodystyle =document.getElementsByClassName("Btn")[0];
+    bodystyle.style.backgroundColor=colorr;
+    console.log({colorr})
   }
-
+ 
   function writecolourcode(){
-    setcolourcode(getrandomcolour())
+    setcolourcode(colorr)
   }
   return (
     <div className='container' id='container' onClick={inccount}>
       <p >You clicked {count} times.</p>
       <ColourswitchBtn onchangecolour={handlechangecolour} setcolourcode={writecolourcode}/>
 
-      <button onClick={(e)=>{
+      <button className='Btn' onClick={(e)=>{
             e.stopPropagation();
             handlechangecolour();
             writecolourcode();
